@@ -3,10 +3,10 @@ package be.jedemu.jedemuDex.infrastructure.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller("/")
+@Controller
 public class RootController {
 
-    @GetMapping
+    @GetMapping("/")
     public String index() {
         return "index";
     }
