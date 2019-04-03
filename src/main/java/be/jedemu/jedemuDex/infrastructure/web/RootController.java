@@ -11,4 +11,9 @@ public class RootController {
         return "index";
     }
 
+    @GetMapping("/list")
+    public String list() {
+        return "list";
+    }
+
 }

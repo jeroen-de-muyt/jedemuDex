@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/fontawesome/font-awesome.min.css}"/>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        HEADER
+    </header>
+    <div class="content-wrapper">
+        <div class="sidebar">
+            SIDEBAR
+        </div>
+        <div class="content">
+            <h1>A test list</h1>
+            <div class="panel-list">
+                <div class="list-item" th:each="i : ${#numbers.sequence(0, 99)}">
+                    <div class="list-item-header">
+                        <h3>Title</h3>
+                    </div>
+                    <div class="list-item-content">
+                        CONTENT
+                    </div>
+                    <div class="list-item-footer">FOOTER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-padding"></div>
+        <div class="footer-content">
+            <div class="copyright">&copy; jedemu 2019</div>
+            <div class="contact">
+                <h4>Contact me</h4>
+                <a href="https://twitter.com/jedemu115"><i class="fa fa-twitter"></i>@jedemu115</a>
+            </div>
+        </div>
+        <div class="footer-padding"></div>
+    </footer>
+</div>
+</body>
+</html>

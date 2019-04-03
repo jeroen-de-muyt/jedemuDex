@@ -57,7 +57,7 @@ footer .copyright, footer .contact {
 }
 
 .sidebar {
-    flex: 1;
+    flex: 0 1 300px;
     background-color: lightgreen;
 }
 
@@ -75,4 +75,34 @@ a {
     font-size: 90%;
     color: #333;
     text-decoration: none;
+}
+
+.panel-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.panel-list .list-item {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    border: solid 1px #333;
+    background-color: #CCC;
+}
+
+.panel-list .list-item .list-item-header {
+    padding: 0.5em;
+    border-bottom: solid 1px #333;
+    text-align: center;
+}
+
+.panel-list .list-item .list-item-footer {
+    padding: 0.5em;
+    border-top: solid 1px #333;
+}
+
+.panel-list .list-item .list-item-content {
+    flex: 1;
 }
