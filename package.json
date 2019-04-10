@@ -1,0 +1,52 @@
+{
+  "name": "jedemuDex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "build:watch": "yarn build --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "react/src/**/*.{js}",
+      "!react/src/index.js",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/jestsetup.js"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
+    "@babel/plugin-transform-modules-umd": "7.1.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.2",
+    "enzyme": "3.7.0",
+    "enzyme-adapter-react-16": "1.6.0",
+    "enzyme-to-json": "3.3.4",
+    "jest": "23.6.0",
+    "jest-mock-axios": "2.1.11",
+    "react-test-renderer": "16.5.2",
+    "webpack": "4.20.2",
+    "webpack-cli": "3.1.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.2.5",
+    "axios": "0.18.0",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-table": "6.8.6"
+  }
+}
